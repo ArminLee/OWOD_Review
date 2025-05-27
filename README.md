@@ -172,12 +172,83 @@ categories above.
 - Venue: CVPR 2022
 - Code: https://github.com/deeplearning-wisc/stud
 
-<a name="DOWB"></a>
+<a name="SKDF"></a>
 
 **Detecting the open-world objects with the help of the Brain**
 
 - Paper: https://arxiv.org/abs/2303.11623
 - Code: https://github.com/xiaomabufei/DOWB
+
+<a name="ORTH"></a>
+
+**Exploring Orthogonality in Open World Object Detection (OrthogonalDet)**
+
+- Paper: https://openaccess.thecvf.com/content/CVPR2024/papers/Sun_Exploring_Orthogonality_in_Open_World_Object_Detection_CVPR_2024_paper.pdf  
+- Venue: CVPR 2024  
+- Code: https://github.com/feifeiobama/OrthogonalDet  
+
+<a name="ALLOW"></a>
+
+**Annealing-based Label-Transfer Learning for Open World Object Detection (ALLOW)**
+
+- Paper: https://openaccess.thecvf.com/content/CVPR2023/papers/Ma_Annealing-Based_Label-Transfer_Learning_for_Open_World_Object_Detection_CVPR_2023_paper.pdf  
+- Venue: CVPR 2023  
+- Code: https://github.com/DIG-Beihang/ALLOW  
+
+<a name="Hyp-OW"></a>
+
+**Exploiting Hierarchical Structure Learning with Hyperbolic Distance Enhances Open World Object Detection (Hyp-OW)**
+
+- Paper: https://arxiv.org/pdf/2306.14291  
+- Venue: AAAI 2024  
+- Code: https://github.com/boschresearch/Hyp-OW  
+
+<a name="SGROD"></a>
+
+**Recalling Unknowns Without Losing Precision: An Effective Solution to Large Model-Guided Open World Object Detection (SGROD)**
+
+- Paper: https://ieeexplore.ieee.org/document/10684083  
+- Venue: IEEE Transactions on Image Processing (TIP)  
+- Code: https://github.com/harrylin-hyl/SGROD  
+
+<a name="KTCN"></a>
+
+**Enhancing Open-World Object Detection with Knowledge Transfer and Class-Awareness Neutralization (KTCN)**
+
+- Paper: https://www.ijcai.org/proceedings/2024/0162.pdf  
+- Venue: IJCAI 2024  
+- Code: https://github.com/xxyzll/KTCN  
+
+<a name="MEPU"></a>
+
+**Unsupervised Recognition of Unknown Objects for Open-World Object Detection (MEPU)**
+
+- Paper: https://ieeexplore.ieee.org/abstract/document/10978049  
+- Venue: IEEE Transactions on Neural Networks and Learning Systems (TNNLS)  
+- Code: https://github.com/frh23333/mepu-owod  
+
+<a name="FMDL"></a>
+
+**Enhancing Open-World Object Detection with Foundation Models and Dynamic Learning (FMDL)**
+
+- Paper: https://www.sciencedirect.com/science/article/abs/pii/S0957417425006724  
+- Venue: Expert Systems with Applications (ESA)  
+- Code: -  
+
+<a name="OW-OVD"></a>
+
+**Unified Open World and Open Vocabulary Object Detection (OW-OVD)**
+
+- Venue: CVPR 2025  
+- Code: https://github.com/xxyzll/OW_OVD  
+
+<a name="YOLO-UniOW"></a>
+
+**Efficient Universal Open-World Object Detection (YOLO-UniOW)**
+
+- Paper: https://arxiv.org/abs/2412.20645  
+- Venue: arXiv (preprint)  
+- Code: https://github.com/THU-MIG/YOLO-UniOW 
 
 # Dataset splits & Results
 
@@ -195,24 +266,410 @@ The other classes are grouped into tasks by semantic drifts.
 
 Most existing state-ot-the-art methods use OWOD split as their evaluation protocol, the results are concluded below:
 
-| Task IDs                         |  Task 1  |               |  Task 2  |                 |               |       |  Task 3  |                  |               |       |      Task 4      |               |       |
-|:---------------------------------|:--------:|:-------------:|:--------:|:---------------:|:-------------:|:-----:|:--------:|:----------------:|:-------------:|:-----:|:----------------:|:-------------:|:-----:|
-| Metrics                          | U-Recall |      mAP      | U-Recall |       mAP       |               |       | U-Recall |       mAP        |               |       |       mAP        |               |       |
-|                                  |          | Current known |          | Previously known | Current known | Both  |          | Previously known | Current known | Both  | Previously known | Current known | Both  |
-| [ORE](#ORE)                      |   4.9    |     56.0      |   2.9    |       52.7      |     26.0      | 39.4  |   3.9    |       38.2       |     12.7      | 29.7  |       29.6       |     12.4      | 25.3  |
-| [UC-OWOD](#UC-OWOD)              |    -     |     50.7      |    -     |       33.1      |     30.5      | 31.8  |    -     |       28.8       |     16.3      | 24.6  |       25.6       |     12.9      | 23.2  |
-| [OW-DETR](#OW-DETR)               |   7.5    |     59.2      |   6.2    |       53.6      |     33.5      | 42.9  |   5.7    |       38.3       |     15.8      | 30.8  |       31.4       |     17.1      | 27.8  |
-| [Fast-OWDETR](#Fast-OWDETR)       |   9.2    |     56.6      |   8.8    |       51.3      |     28.6      | 39.4  |   7.8    |       39.2       |     15.7      | 32.2  |       28.2       |     11.4      | 25.0  |
-| [OCPL](#OCPL)                     |   8.3    |     56.6      |   7.7    |       50.7      |     27.5      | 39.1  |   11.9   |       38.6       |     14.7      | 30.7  |       30.8       |     14.4      | 26.7  |
-| [RE-OWOD](#RE-OWOD)               |   9.1    |     59.7      |   9.9    |       54.1      |     37.3      | 45.6  |   11.4   |       43.1       |     24.6      | 37.6  |       38.0       |     28.7      | 35.7  |
-| [RandBox](#RandBox)              |   10.6   |     61.8      |   6.3    |        -        |      -        | 45.3  |   7.8    |        -         |      -        | 39.4  |        -         |      -        | 35.4  |
-| [2B-OCD](#2B-OCD)                 |   12.1   |     56.4      |   9.4    |       51.6      |     25.3      | 38.5  |   11.7   |       37.2       |     13.2      | 29.2  |       30.0       |     13.3      | 25.8  |
-| [PROB](#PROB)                     |   19.4   |     59.5      |   17.4   |       55.7      |     32.2      | 44.0  |   19.6   |       43.0       |     22.2      | 36.0  |       35.7       |     18.9      | 31.5  |
-| [Open World DETR](#OpenWorldDETR) |   21.0   |     59.9      |   15.7   |       51.8      |     36.4      | 44.1  |   17.4   |       38.9       |     24.7      | 34.2  |       32.0       |     19.7      | 29.0  |
-| [CAT](#CAT)                       |   21.8   |     59.9      |   18.6   |       54.0      |     33.6      | 43.8  |   23.9   |       42.1       |     19.8      | 34.7  |       35.1       |     17.1      | 30.6  |
-| [OW-RCNN](#OW-RCNN)               |   37.7   |     63.0      |   39.9   |       48.8      |     41.7      | 45.2  |   43.0   |       45.2       |     31.7      | 40.7  |       40.3       |     28.8      | 37.4  |
-| [DOWB](#DOWB)                     |   39.0   |     56.8      |   36.7   |       52.3      |     28.3      | 40.3  |   36.1   |       36.9       |     16.4      | 30.1  |       31.0       |     14.7      | 26.9  |
-| [MAVL](#MAVL)                     |   50.1   |     64.0      |   49.5   |       61.6      |     30.8      | 46.2  |   50.9   |       43.8       |     22.7      | 36.8  |       36.2       |     20.6      | 32.3  |
+<table border="1" cellspacing="0" cellpadding="4"
+       style="border-collapse: collapse; margin: auto; text-align: center;">
+  <thead>
+    <tr>
+      <th style="text-align: center">Task IDs</th>
+      <th colspan="2" style="text-align: center">Task 1</th>
+      <th colspan="4" style="text-align: center">Task 2</th>
+      <th colspan="4" style="text-align: center">Task 3</th>
+      <th colspan="3" style="text-align: center">Task 4</th>
+    </tr>
+    <tr>
+      <th rowspan="2" style="text-align: center">Methods</th>
+      <th rowspan="2" style="text-align: center">U-Recall</th>
+      <th style="text-align: center">mAP</th>
+      <th rowspan="2" style="text-align: center">U-Recall</th>
+      <th colspan="3" style="text-align: center">mAP</th>
+      <th rowspan="2" style="text-align: center">U-Recall</th>
+      <th colspan="3" style="text-align: center">mAP</th>
+      <th colspan="3" style="text-align: center">mAP</th>
+    </tr>
+    <tr>
+      <th style="text-align: center">Current<br/>Known</th>
+      <th style="text-align: center">Previously<br/>Known</th>
+      <th style="text-align: center">Current<br/>Known</th>
+      <th style="text-align: center">Both</th>
+      <th style="text-align: center">Previously<br/>Known</th>
+      <th style="text-align: center">Current<br/>Known</th>
+      <th style="text-align: center">Both</th>
+      <th style="text-align: center">Previously<br/>Known</th>
+      <th style="text-align: center">Current<br/>Known</th>
+      <th style="text-align: center">Both</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#ORE">ORE</a></td>
+      <td>4.9</td>
+      <td>56.0</td>
+      <td>2.9</td>
+      <td>52.7</td>
+      <td>26.0</td>
+      <td>39.4</td>
+      <td>3.9</td>
+      <td>38.2</td>
+      <td>12.7</td>
+      <td>29.7</td>
+      <td>29.6</td>
+      <td>12.4</td>
+      <td>25.3</td>
+    </tr>
+    <tr>
+      <td><a href="#UC-OWOD">UC-OWOD</a></td>
+      <td>–</td>
+      <td>50.7</td>
+      <td>–</td>
+      <td>33.1</td>
+      <td>30.5</td>
+      <td>31.8</td>
+      <td>–</td>
+      <td>28.8</td>
+      <td>16.3</td>
+      <td>24.6</td>
+      <td>25.6</td>
+      <td>12.9</td>
+      <td>23.2</td>
+    </tr>
+    <tr>
+      <td><a href="#OW-DETR">OW-DETR</a></td>
+      <td>7.5</td>
+      <td>59.2</td>
+      <td>6.2</td>
+      <td>53.6</td>
+      <td>33.5</td>
+      <td>42.9</td>
+      <td>5.7</td>
+      <td>38.3</td>
+      <td>15.8</td>
+      <td>30.8</td>
+      <td>31.4</td>
+      <td>17.1</td>
+      <td>27.8</td>
+    </tr>
+    <tr>
+      <td><a href="#Fast-OWDETR">Fast-OWDETR</a></td>
+      <td>9.2</td>
+      <td>56.6</td>
+      <td>8.8</td>
+      <td>51.3</td>
+      <td>28.6</td>
+      <td>39.4</td>
+      <td>7.8</td>
+      <td>39.2</td>
+      <td>15.7</td>
+      <td>32.2</td>
+      <td>28.2</td>
+      <td>11.4</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <td><a href="#OCPL">OCPL</a></td>
+      <td>8.3</td>
+      <td>56.6</td>
+      <td>7.7</td>
+      <td>50.7</td>
+      <td>27.5</td>
+      <td>39.1</td>
+      <td>11.9</td>
+      <td>38.6</td>
+      <td>14.7</td>
+      <td>30.7</td>
+      <td>30.8</td>
+      <td>14.4</td>
+      <td>26.7</td>
+    </tr>
+    <tr>
+      <td><a href="#RE-OWOD">RE-OWOD</a></td>
+      <td>9.1</td>
+      <td>59.7</td>
+      <td>9.9</td>
+      <td>54.1</td>
+      <td>37.3</td>
+      <td>45.6</td>
+      <td>11.4</td>
+      <td>43.1</td>
+      <td>24.6</td>
+      <td>37.6</td>
+      <td>38.0</td>
+      <td>28.7</td>
+      <td>35.7</td>
+    </tr>
+    <tr>
+      <td><a href="#RandBox">RandBox</a></td>
+      <td>10.6</td>
+      <td>61.8</td>
+      <td>6.3</td>
+      <td>–</td>
+      <td>–</td>
+      <td>45.3</td>
+      <td>7.8</td>
+      <td>–</td>
+      <td>–</td>
+      <td>39.4</td>
+      <td>–</td>
+      <td>–</td>
+      <td>35.4</td>
+    </tr>
+    <tr>
+      <td><a href="#2B-OCD">2B-OCD</a></td>
+      <td>12.1</td>
+      <td>56.4</td>
+      <td>9.4</td>
+      <td>51.6</td>
+      <td>25.3</td>
+      <td>38.5</td>
+      <td>11.7</td>
+      <td>37.2</td>
+      <td>13.2</td>
+      <td>29.2</td>
+      <td>30.0</td>
+      <td>13.3</td>
+      <td>25.8</td>
+    </tr>
+    <tr>
+      <td><a href="#ALLOW">ALLOW</a></td>
+      <td>13.6</td>
+      <td>59.3</td>
+      <td>10.0</td>
+      <td>53.2</td>
+      <td>34.0</td>
+      <td>45.6</td>
+      <td>14.3</td>
+      <td>42.6</td>
+      <td>26.7</td>
+      <td>38.0</td>
+      <td>33.5</td>
+      <td>21.8</td>
+      <td>30.6</td>
+    </tr>
+    <tr>
+      <td><a href="#PROB">PROB</a></td>
+      <td>19.4</td>
+      <td>59.5</td>
+      <td>17.4</td>
+      <td>55.7</td>
+      <td>32.2</td>
+      <td>44.0</td>
+      <td>19.6</td>
+      <td>43.0</td>
+      <td>22.2</td>
+      <td>36.0</td>
+      <td>35.7</td>
+      <td>18.9</td>
+      <td>31.5</td>
+    </tr>
+    <tr>
+      <td><a href="#OpenWorldDETR">Open World DETR</a></td>
+      <td>21.0</td>
+      <td>59.9</td>
+      <td>15.7</td>
+      <td>51.8</td>
+      <td>36.4</td>
+      <td>44.1</td>
+      <td>17.4</td>
+      <td>38.9</td>
+      <td>24.7</td>
+      <td>34.2</td>
+      <td>32.0</td>
+      <td>19.7</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <td><a href="#Hyp-OW">Hyp-OW</a></td>
+      <td>23.5</td>
+      <td>59.4</td>
+      <td>20.6</td>
+      <td>–</td>
+      <td>–</td>
+      <td>44.0</td>
+      <td>26.3</td>
+      <td>–</td>
+      <td>–</td>
+      <td>36.8</td>
+      <td>–</td>
+      <td>–</td>
+      <td>33.6</td>
+    </tr>
+    <tr>
+      <td><a href="#CAT">CAT</a></td>
+      <td>23.7</td>
+      <td>60.0</td>
+      <td>19.1</td>
+      <td>55.5</td>
+      <td>32.7</td>
+      <td>44.1</td>
+      <td>24.4</td>
+      <td>42.8</td>
+      <td>18.7</td>
+      <td>34.8</td>
+      <td>34.4</td>
+      <td>16.6</td>
+      <td>29.9</td>
+    </tr>
+    <tr>
+      <td><a href="#ORTH">ORTH</a></td>
+      <td>24.6</td>
+      <td>61.3</td>
+      <td>26.3</td>
+      <td>55.5</td>
+      <td>38.5</td>
+      <td>47.0</td>
+      <td>29.1</td>
+      <td>46.7</td>
+      <td>30.6</td>
+      <td>41.3</td>
+      <td>42.4</td>
+      <td>24.3</td>
+      <td>37.9</td>
+    </tr>
+    <tr>
+      <td><a href="#MEPU">MEPU-FS</a></td>
+      <td>31.6</td>
+      <td>60.2</td>
+      <td>30.9</td>
+      <td>57.3</td>
+      <td>33.3</td>
+      <td>44.8</td>
+      <td>30.1</td>
+      <td>42.6</td>
+      <td>21.0</td>
+      <td>35.4</td>
+      <td>34.8</td>
+      <td>19.1</td>
+      <td>30.9</td>
+    </tr>
+    <tr>
+      <td><a href="#SGROD">SGROD</a></td>
+      <td>34.3</td>
+      <td>59.8</td>
+      <td>32.6</td>
+      <td>56.0</td>
+      <td>32.3</td>
+      <td>44.9</td>
+      <td>32.7</td>
+      <td>42.8</td>
+      <td>22.4</td>
+      <td>36.0</td>
+      <td>35.5</td>
+      <td>18.5</td>
+      <td>31.2</td>
+    </tr>
+    <tr>
+      <td><a href="#OW-RCNN">OW-RCNN</a></td>
+      <td>37.7</td>
+      <td>63.0</td>
+      <td>39.9</td>
+      <td>48.8</td>
+      <td>41.7</td>
+      <td>45.2</td>
+      <td>43.0</td>
+      <td>45.2</td>
+      <td>31.7</td>
+      <td>40.7</td>
+      <td>40.3</td>
+      <td>28.8</td>
+      <td>37.4</td>
+    </tr>
+    <tr>
+      <td><a href="#SKDF">SKDF</a></td>
+      <td>39.0</td>
+      <td>56.8</td>
+      <td>36.7</td>
+      <td>52.3</td>
+      <td>28.3</td>
+      <td>40.3</td>
+      <td>36.1</td>
+      <td>36.9</td>
+      <td>16.4</td>
+      <td>30.1</td>
+      <td>31.0</td>
+      <td>14.7</td>
+      <td>26.9</td>
+    </tr>
+    <tr>
+      <td><a href="#KTCN">KTCN</a></td>
+      <td>41.5</td>
+      <td>60.2</td>
+      <td>38.6</td>
+      <td>55.8</td>
+      <td>36.3</td>
+      <td>46.0</td>
+      <td>39.7</td>
+      <td>43.5</td>
+      <td>22.1</td>
+      <td>36.4</td>
+      <td>35.1</td>
+      <td>16.2</td>
+      <td>30.4</td>
+    </tr>
+    <tr>
+      <td><a href="#FMDL">FMDL</a></td>
+      <td>41.6</td>
+      <td>62.3</td>
+      <td>38.7</td>
+      <td>59.2</td>
+      <td>38.6</td>
+      <td>47.3</td>
+      <td>35.6</td>
+      <td>48.1</td>
+      <td>32.2</td>
+      <td>43.2</td>
+      <td>44.5</td>
+      <td>26.7</td>
+      <td>38.3</td>
+    </tr>
+    <tr>
+      <td><a href="#MAVL">MAVL</a></td>
+      <td>50.1</td>
+      <td>64.0</td>
+      <td>49.5</td>
+      <td>61.6</td>
+      <td>30.8</td>
+      <td>46.2</td>
+      <td>50.9</td>
+      <td>43.8</td>
+      <td>22.7</td>
+      <td>36.8</td>
+      <td>36.2</td>
+      <td>20.6</td>
+      <td>32.3</td>
+    </tr>
+    <tr>
+      <td><a href="#OW-OVD">OW-OVD</a></td>
+      <td>50.0</td>
+      <td>69.4</td>
+      <td>51.7</td>
+      <td>69.5</td>
+      <td>41.7</td>
+      <td>55.6</td>
+      <td>50.6</td>
+      <td>55.5</td>
+      <td>29.8</td>
+      <td>47.0</td>
+      <td>47.0</td>
+      <td>25.2</td>
+      <td>41.6</td>
+    </tr>
+    <tr>
+      <td><a href="#YOLO-UniOW">YOLO-UniOW</a></td>
+      <td>82.6</td>
+      <td>73.6</td>
+      <td>82.6</td>
+      <td>73.4</td>
+      <td>73.4</td>
+      <td>48.4</td>
+      <td>60.9</td>
+      <td>81.5</td>
+      <td>60.9</td>
+      <td>39.0</td>
+      <td>53.6</td>
+      <td>32.0</td>
+      <td>48.2</td>
+    </tr>
+  </tbody>
+</table>
 
 In the latest OWOD task, [OW-DETR](#OW-DETR) proposed a new strategy by splitting the categories across super-classes, 
 called MS-COCO split. Specifically, object classes are grouped into the same tasks by semantic meanings. For example,
@@ -225,14 +682,231 @@ task: *Animals, Person, Vehicles*.
 
 Several methods also reported their evaluation results based on MS-COCO split. The results are shown below:
 
-| Task IDs           |  Task 1  |             |  Task 2  |                  |               |          |  Task 3  |                  |             |        |      Task 4      |               |          |
-|:-------------------|:--------:|:-----------:|:--------:|:----------------:|:-------------:|:--------:|:--------:|:----------------:|:-----------:|:------:|:----------------:|:-------------:|:--------:|
-| Metrics            | U-Recall |     mAP     | U-Recall |       mAP        |               |          | U-Recall |       mAP        |             |        |       mAP        |               |          |
-|                    |          |Current known|          | Previously known | Current known |   Both   |          | Previously known |Current known|  Both  | Previously known | Current known |   Both   |
-| [ORE](#ORE)        | 1.5      |    61.4     | 3.9      |       56.5       |     26.1      | 40.6     | 3.6      | 38.7             |    23.7     |  33.7  |       33.6       |     26.3      |   31.8   | 
-| [OW-DETR](#OW-DETR) | 5.7      |    71.5     | 6.2      |       62.8       |     27.5      | 43.8     | 6.9      |       45.2       |    24.9     |  38.5  |       38.2       |     28.1      |   33.1   |
-| [PROB](#PROB)       | 19.4     |    59.5     | 17.4     |       55.7       |     32.2      | 44.0     | 19.6     |       43.0       |    22.2     |  36.0  |       35.7       |     18.9      |   31.5   |
-| [CAT](#CAT)         | 24.0     |    74.2     | 23.0     |       67.6       |     35.5      | 50.7     | 24.6     |       51.2       |    32.6     |  45.0  |       45.4       |     35.1      |   42.8   |
-| [OW-RCNN](#OW-RCNN) | 23.9     |    68.9     | 33.3     |       49.6       |     36.7      | 41.9     | 40.8     |       42.3       |    30.8     |  38.5  |       39.4       |     32.2      |   37.7   |
-| [DOWB](#DOWB)       | 60.9     |    69.4     | 60.0     |       63.8       |     26.9      | 44.4     | 58.6     |       46.2       |    28.0     |  40.1  |       41.8       |     29.6      |   38.7   |
-
+<table border="1" cellspacing="0" cellpadding="4"
+       style="border-collapse: collapse; margin: auto; text-align: center;">
+  <thead>
+    <tr>
+      <th style="text-align: center">Task IDs</th>
+      <th colspan="2" style="text-align: center">Task 1</th>
+      <th colspan="4" style="text-align: center">Task 2</th>
+      <th colspan="4" style="text-align: center">Task 3</th>
+      <th colspan="3" style="text-align: center">Task 4</th>
+    </tr>
+    <tr>
+      <th rowspan="2" style="text-align: center">Methods</th>
+      <th rowspan="2" style="text-align: center">U-Recall</th>
+      <th style="text-align: center">mAP</th>
+      <th rowspan="2" style="text-align: center">U-Recall</th>
+      <th colspan="3" style="text-align: center">mAP</th>
+      <th rowspan="2" style="text-align: center">U-Recall</th>
+      <th colspan="3" style="text-align: center">mAP</th>
+      <th colspan="3" style="text-align: center">mAP</th>
+    </tr>
+    <tr>
+      <th style="text-align: center">Current<br/>Known</th>
+      <th style="text-align: center">Previously<br/>Known</th>
+      <th style="text-align: center">Current<br/>Known</th>
+      <th style="text-align: center">Both</th>
+      <th style="text-align: center">Previously<br/>Known</th>
+      <th style="text-align: center">Current<br/>Known</th>
+      <th style="text-align: center">Both</th>
+      <th style="text-align: center">Previously<br/>Known</th>
+      <th style="text-align: center">Current<br/>Known</th>
+      <th style="text-align: center">Both</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#ORE">ORE</a></td>
+      <td>1.5</td>
+      <td>61.4</td>
+      <td>3.9</td>
+      <td>56.5</td>
+      <td>26.1</td>
+      <td>40.6</td>
+      <td>3.6</td>
+      <td>38.7</td>
+      <td>23.7</td>
+      <td>33.7</td>
+      <td>33.6</td>
+      <td>26.3</td>
+      <td>31.8</td>
+    </tr>
+    <tr>
+      <td><a href="#OW-DETR">OW-DETR</a></td>
+      <td>5.7</td>
+      <td>71.5</td>
+      <td>6.2</td>
+      <td>62.8</td>
+      <td>27.5</td>
+      <td>43.8</td>
+      <td>6.9</td>
+      <td>45.2</td>
+      <td>24.9</td>
+      <td>38.5</td>
+      <td>38.2</td>
+      <td>28.1</td>
+      <td>33.1</td>
+    </tr>
+    <tr>
+      <td><a href="#PROB">PROB</a></td>
+      <td>19.4</td>
+      <td>59.5</td>
+      <td>17.4</td>
+      <td>55.7</td>
+      <td>32.2</td>
+      <td>44.0</td>
+      <td>19.6</td>
+      <td>43.0</td>
+      <td>22.2</td>
+      <td>36.0</td>
+      <td>35.7</td>
+      <td>18.9</td>
+      <td>31.5</td>
+    </tr>
+    <tr>
+      <td><a href="#CAT">CAT</a></td>
+      <td>24.0</td>
+      <td>74.2</td>
+      <td>23.0</td>
+      <td>67.6</td>
+      <td>35.5</td>
+      <td>50.7</td>
+      <td>24.6</td>
+      <td>51.2</td>
+      <td>32.6</td>
+      <td>45.0</td>
+      <td>45.4</td>
+      <td>35.1</td>
+      <td>42.8</td>
+    </tr>
+    <tr>
+      <td><a href="#ORTH">ORTH</a></td>
+      <td>24.6</td>
+      <td>71.6</td>
+      <td>27.9</td>
+      <td>64.0</td>
+      <td>39.9</td>
+      <td>51.3</td>
+      <td>31.9</td>
+      <td>52.1</td>
+      <td>42.2</td>
+      <td>48.8</td>
+      <td>48.7</td>
+      <td>38.8</td>
+      <td>46.2</td>
+    </tr>
+    <tr>
+      <td><a href="#Hyp-OW">Hyp-OW</a></td>
+      <td>23.9</td>
+      <td>72.7</td>
+      <td>23.3</td>
+      <td>–</td>
+      <td>–</td>
+      <td>50.6</td>
+      <td>25.4</td>
+      <td>–</td>
+      <td>–</td>
+      <td>46.2</td>
+      <td>–</td>
+      <td>–</td>
+      <td>44.8</td>
+    </tr>
+    <tr>
+      <td><a href="#OW-RCNN">OW-RCNN</a></td>
+      <td>23.9</td>
+      <td>68.9</td>
+      <td>33.3</td>
+      <td>49.6</td>
+      <td>36.7</td>
+      <td>41.9</td>
+      <td>40.8</td>
+      <td>42.3</td>
+      <td>30.8</td>
+      <td>38.5</td>
+      <td>39.4</td>
+      <td>32.2</td>
+      <td>37.7</td>
+    </tr>
+    <tr>
+      <td><a href="#MEPU">MEPU-FS</a></td>
+      <td>37.9</td>
+      <td>74.3</td>
+      <td>35.8</td>
+      <td>68.0</td>
+      <td>41.9</td>
+      <td>54.3</td>
+      <td>35.7</td>
+      <td>50.2</td>
+      <td>38.3</td>
+      <td>46.2</td>
+      <td>43.7</td>
+      <td>33.7</td>
+      <td>41.2</td>
+    </tr>
+    <tr>
+      <td><a href="#SGROD">SGROD</a></td>
+      <td>48.0</td>
+      <td>73.2</td>
+      <td>48.9</td>
+      <td>64.7</td>
+      <td>36.7</td>
+      <td>50.0</td>
+      <td>47.7</td>
+      <td>47.4</td>
+      <td>32.4</td>
+      <td>42.4</td>
+      <td>42.5</td>
+      <td>32.6</td>
+      <td>40.0</td>
+    </tr>
+    <tr>
+      <td><a href="#SKDF">SKDF</a></td>
+      <td>60.9</td>
+      <td>69.4</td>
+      <td>60.0</td>
+      <td>63.8</td>
+      <td>26.9</td>
+      <td>44.4</td>
+      <td>58.6</td>
+      <td>46.2</td>
+      <td>28.0</td>
+      <td>40.1</td>
+      <td>41.8</td>
+      <td>29.6</td>
+      <td>38.7</td>
+    </tr>
+    <tr>
+      <td><a href="#OW-OVD">OW-OVD</a></td>
+      <td>76.2</td>
+      <td>78.6</td>
+      <td>79.8</td>
+      <td>78.5</td>
+      <td>61.5</td>
+      <td>69.6</td>
+      <td>78.4</td>
+      <td>69.6</td>
+      <td>55.1</td>
+      <td>64.7</td>
+      <td>64.8</td>
+      <td>56.3</td>
+      <td>62.7</td>
+    </tr>
+    <tr>
+      <td><a href="#YOLO-UniOW">YOLO-UniOW</a></td>
+      <td>84.5</td>
+      <td>74.4</td>
+      <td>83.4</td>
+      <td>74.4</td>
+      <td>56.9</td>
+      <td>65.2</td>
+      <td>83.0</td>
+      <td>65.2</td>
+      <td>52.2</td>
+      <td>61.0</td>
+      <td>61.0</td>
+      <td>52.7</td>
+      <td>58.9</td>
+    </tr>
+  </tbody>
+</table>
