@@ -1,6 +1,6 @@
-# Open World Object Detection: A Review
+# Open World Object Detection: A Survey
 
-Welcome to the code archive for our review paper: Open World Object Detection: A Review
+Welcome to the code archive for our review paper: Open World Object Detection: A Survey
 
 ## Abstract:
 
@@ -910,3 +910,16 @@ Several methods also reported their evaluation results based on MS-COCO split. T
     </tr>
   </tbody>
 </table>
+
+# Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@article{li2024open,
+  title={Open world object detection: a survey},
+  author={Li, Yiming and Wang, Yi and Wang, Wenqian and Lin, Dan and Li, Bingbing and Yap, Kim-Hui},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2024},
+  publisher={IEEE}
+}
